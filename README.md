@@ -1,0 +1,1 @@
+A small sample project made based off of a tutorial (http://skeuo.com/uicollectionview-custom-layout-tutorial#section3), for the purposes of learning how to subclass and customize UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewLayout, and UICollectionViewFlowLayout
