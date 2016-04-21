@@ -16,7 +16,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    self.customCollectionViewController = [[JeffCustomCollectionViewController alloc] initWithNibName:@"JeffCustomCollectionViewController" bundle:nil];
+    self.window.rootViewController = self.customCollectionViewController;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

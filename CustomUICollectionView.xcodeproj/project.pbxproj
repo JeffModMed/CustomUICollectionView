@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		7DBC66441CC564A0004C6F9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC66431CC564A0004C6F9B /* main.m */; };
 		7DBC66471CC564A0004C6F9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC66461CC564A0004C6F9B /* AppDelegate.m */; };
-		7DBC664A1CC564A0004C6F9B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC66491CC564A0004C6F9B /* ViewController.m */; };
-		7DBC664D1CC564A0004C6F9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DBC664B1CC564A0004C6F9B /* Main.storyboard */; };
 		7DBC664F1CC564A0004C6F9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DBC664E1CC564A0004C6F9B /* Assets.xcassets */; };
 		7DBC66521CC564A0004C6F9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DBC66501CC564A0004C6F9B /* LaunchScreen.storyboard */; };
 		7DBC665D1CC564A0004C6F9B /* CustomUICollectionViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC665C1CC564A0004C6F9B /* CustomUICollectionViewTests.m */; };
 		7DBC66681CC564A0004C6F9B /* CustomUICollectionViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBC66671CC564A0004C6F9B /* CustomUICollectionViewUITests.m */; };
+		7DE3A71F1CC91FCF00A8E856 /* JeffCustomCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3A71D1CC91FCF00A8E856 /* JeffCustomCollectionViewController.m */; };
+		7DE3A7201CC91FCF00A8E856 /* JeffCustomCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3A71E1CC91FCF00A8E856 /* JeffCustomCollectionViewController.xib */; };
+		7DE3A7231CC9266D00A8E856 /* JeffCustomCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3A7221CC9266D00A8E856 /* JeffCustomCollectionViewLayout.m */; };
+		7DE3A72B1CC9299E00A8E856 /* JeffCustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3A7291CC9299E00A8E856 /* JeffCustomCollectionViewCell.m */; };
+		7DE3A72C1CC9299E00A8E856 /* JeffCustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3A72A1CC9299E00A8E856 /* JeffCustomCollectionViewCell.xib */; };
+		7DE3A7391CC9493700A8E856 /* BHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3A7361CC9493700A8E856 /* BHAlbum.m */; };
+		7DE3A73A1CC9493700A8E856 /* BHPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3A7381CC9493700A8E856 /* BHPhoto.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +44,6 @@
 		7DBC66431CC564A0004C6F9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DBC66451CC564A0004C6F9B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7DBC66461CC564A0004C6F9B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7DBC66481CC564A0004C6F9B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7DBC66491CC564A0004C6F9B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7DBC664C1CC564A0004C6F9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DBC664E1CC564A0004C6F9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DBC66511CC564A0004C6F9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DBC66531CC564A0004C6F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +53,18 @@
 		7DBC66631CC564A0004C6F9B /* CustomUICollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomUICollectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBC66671CC564A0004C6F9B /* CustomUICollectionViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomUICollectionViewUITests.m; sourceTree = "<group>"; };
 		7DBC66691CC564A0004C6F9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DE3A71C1CC91FCF00A8E856 /* JeffCustomCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JeffCustomCollectionViewController.h; sourceTree = "<group>"; };
+		7DE3A71D1CC91FCF00A8E856 /* JeffCustomCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JeffCustomCollectionViewController.m; sourceTree = "<group>"; };
+		7DE3A71E1CC91FCF00A8E856 /* JeffCustomCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JeffCustomCollectionViewController.xib; sourceTree = "<group>"; };
+		7DE3A7211CC9266D00A8E856 /* JeffCustomCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JeffCustomCollectionViewLayout.h; path = "View Controllers/JeffCustomCollectionViewLayout.h"; sourceTree = "<group>"; };
+		7DE3A7221CC9266D00A8E856 /* JeffCustomCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JeffCustomCollectionViewLayout.m; path = "View Controllers/JeffCustomCollectionViewLayout.m"; sourceTree = "<group>"; };
+		7DE3A7281CC9299E00A8E856 /* JeffCustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JeffCustomCollectionViewCell.h; path = View/JeffCustomCollectionViewCell.h; sourceTree = "<group>"; };
+		7DE3A7291CC9299E00A8E856 /* JeffCustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JeffCustomCollectionViewCell.m; path = View/JeffCustomCollectionViewCell.m; sourceTree = "<group>"; };
+		7DE3A72A1CC9299E00A8E856 /* JeffCustomCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = JeffCustomCollectionViewCell.xib; path = View/JeffCustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		7DE3A7351CC9493700A8E856 /* BHAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BHAlbum.h; path = "Models/Sample Photos Model/BHAlbum.h"; sourceTree = "<group>"; };
+		7DE3A7361CC9493700A8E856 /* BHAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BHAlbum.m; path = "Models/Sample Photos Model/BHAlbum.m"; sourceTree = "<group>"; };
+		7DE3A7371CC9493700A8E856 /* BHPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BHPhoto.h; path = "Models/Sample Photos Model/BHPhoto.h"; sourceTree = "<group>"; };
+		7DE3A7381CC9493700A8E856 /* BHPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BHPhoto.m; path = "Models/Sample Photos Model/BHPhoto.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +117,13 @@
 			children = (
 				7DBC66451CC564A0004C6F9B /* AppDelegate.h */,
 				7DBC66461CC564A0004C6F9B /* AppDelegate.m */,
-				7DBC66481CC564A0004C6F9B /* ViewController.h */,
-				7DBC66491CC564A0004C6F9B /* ViewController.m */,
-				7DBC664B1CC564A0004C6F9B /* Main.storyboard */,
 				7DBC664E1CC564A0004C6F9B /* Assets.xcassets */,
 				7DBC66501CC564A0004C6F9B /* LaunchScreen.storyboard */,
 				7DBC66531CC564A0004C6F9B /* Info.plist */,
 				7DBC66421CC564A0004C6F9B /* Supporting Files */,
+				7DE3A72D1CC948B400A8E856 /* Models */,
+				7DE3A7241CC9273F00A8E856 /* View */,
+				7DE3A7181CC91E3D00A8E856 /* View Controller */,
 			);
 			path = CustomUICollectionView;
 			sourceTree = "<group>";
@@ -138,6 +152,47 @@
 				7DBC66691CC564A0004C6F9B /* Info.plist */,
 			);
 			path = CustomUICollectionViewUITests;
+			sourceTree = "<group>";
+		};
+		7DE3A7181CC91E3D00A8E856 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7DE3A71C1CC91FCF00A8E856 /* JeffCustomCollectionViewController.h */,
+				7DE3A71D1CC91FCF00A8E856 /* JeffCustomCollectionViewController.m */,
+				7DE3A71E1CC91FCF00A8E856 /* JeffCustomCollectionViewController.xib */,
+				7DE3A7211CC9266D00A8E856 /* JeffCustomCollectionViewLayout.h */,
+				7DE3A7221CC9266D00A8E856 /* JeffCustomCollectionViewLayout.m */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		7DE3A7241CC9273F00A8E856 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7DE3A7281CC9299E00A8E856 /* JeffCustomCollectionViewCell.h */,
+				7DE3A7291CC9299E00A8E856 /* JeffCustomCollectionViewCell.m */,
+				7DE3A72A1CC9299E00A8E856 /* JeffCustomCollectionViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7DE3A72D1CC948B400A8E856 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7DE3A72E1CC948D600A8E856 /* Sample Photos Model */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7DE3A72E1CC948D600A8E856 /* Sample Photos Model */ = {
+			isa = PBXGroup;
+			children = (
+				7DE3A7351CC9493700A8E856 /* BHAlbum.h */,
+				7DE3A7361CC9493700A8E856 /* BHAlbum.m */,
+				7DE3A7371CC9493700A8E856 /* BHPhoto.h */,
+				7DE3A7381CC9493700A8E856 /* BHPhoto.m */,
+			);
+			name = "Sample Photos Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,9 +298,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DE3A72C1CC9299E00A8E856 /* JeffCustomCollectionViewCell.xib in Resources */,
 				7DBC66521CC564A0004C6F9B /* LaunchScreen.storyboard in Resources */,
 				7DBC664F1CC564A0004C6F9B /* Assets.xcassets in Resources */,
-				7DBC664D1CC564A0004C6F9B /* Main.storyboard in Resources */,
+				7DE3A7201CC91FCF00A8E856 /* JeffCustomCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +326,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DBC664A1CC564A0004C6F9B /* ViewController.m in Sources */,
+				7DE3A72B1CC9299E00A8E856 /* JeffCustomCollectionViewCell.m in Sources */,
+				7DE3A7231CC9266D00A8E856 /* JeffCustomCollectionViewLayout.m in Sources */,
 				7DBC66471CC564A0004C6F9B /* AppDelegate.m in Sources */,
+				7DE3A71F1CC91FCF00A8E856 /* JeffCustomCollectionViewController.m in Sources */,
+				7DE3A73A1CC9493700A8E856 /* BHPhoto.m in Sources */,
 				7DBC66441CC564A0004C6F9B /* main.m in Sources */,
+				7DE3A7391CC9493700A8E856 /* BHAlbum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +368,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7DBC664B1CC564A0004C6F9B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7DBC664C1CC564A0004C6F9B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7DBC66501CC564A0004C6F9B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -417,6 +469,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JD.CustomUICollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -428,6 +481,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JD.CustomUICollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -498,6 +552,7 @@
 				7DBC666E1CC564A0004C6F9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DBC666F1CC564A0004C6F9B /* Build configuration list for PBXNativeTarget "CustomUICollectionViewTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +561,7 @@
 				7DBC66711CC564A0004C6F9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DBC66721CC564A0004C6F9B /* Build configuration list for PBXNativeTarget "CustomUICollectionViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +570,7 @@
 				7DBC66741CC564A0004C6F9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
