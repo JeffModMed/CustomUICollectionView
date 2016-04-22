@@ -12,6 +12,7 @@
 #import "JeffCustomCollectionViewCell.h"
 #import "JeffCustomCollectionViewController.h"
 #import "JeffCustomCollectionViewLayout.h"
+#import "SamplePhotosCollectionController.h"
 
 static NSString * const JeffDefaultCellReuseIdentifier = @"JeffCell";
 
@@ -19,7 +20,7 @@ static NSString * const JeffDefaultCellReuseIdentifier = @"JeffCell";
 
 @property (strong, nonatomic) IBOutlet UICollectionView *mainCollectionView;
 @property (weak, nonatomic) IBOutlet JeffCustomCollectionViewLayout *jeffLayout;
-@property (weak, nonatomic) NSMutableArray *albums;
+@property (strong, nonatomic) SamplePhotosCollectionController *sampleCollectionController;
 
 @end
 
@@ -29,61 +30,48 @@ static NSString * const JeffDefaultCellReuseIdentifier = @"JeffCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.albums = [NSMutableArray array];
-    
-    [self setupAlbums];
+    self.sampleCollectionController = [SamplePhotosCollectionController new];
     
     [self.collectionView registerClass:[JeffCustomCollectionViewCell class] forCellWithReuseIdentifier:JeffDefaultCellReuseIdentifier];
     
-}
-
-- (void)setupAlbums{
-    NSURL *urlPrefix = [NSURL URLWithString:@"https://raw.github.com/ShadoFlameX/PhotoCollectionView/master/Photos/"];
-    
-    NSInteger photoIndex = 0;
-    
-    for (NSInteger a = 0; a < 12; a++) {
-        BHAlbum *album = [[BHAlbum alloc] init];
-        album.name = [NSString stringWithFormat:@"Photo Album %ld",a + 1];
-        
-        NSUInteger photoCount = 1;
-        for (NSInteger p = 0; p < photoCount; p++) {
-            // there are up to 25 photos available to load from the code repository
-            NSString *photoFilename = [NSString stringWithFormat:@"thumbnail%ld.jpg",photoIndex % 25];
-            NSURL *photoURL = [urlPrefix URLByAppendingPathComponent:photoFilename];
-            BHPhoto *photo = [BHPhoto photoWithImageURL:photoURL];
-            [album addPhoto:photo];
+    __weak JeffCustomCollectionViewController *weakSelf = self;
+    self.sampleCollectionController.updateCellImageBlock = ^(UIImage *samplePhoto, NSIndexPath *indexPath){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // then set them via the main queue if the cell is still visible.
+            __strong typeof(weakSelf)strongSelf = weakSelf;
+            if ([strongSelf.mainCollectionView.indexPathsForVisibleItems containsObject:indexPath]) {
+                JeffCustomCollectionViewCell *jeffCell = (JeffCustomCollectionViewCell*)[strongSelf.mainCollectionView cellForItemAtIndexPath:indexPath];
+                jeffCell.imageView.image = samplePhoto;
+            }
             
-            photoIndex++;
-        }
-        
-        [self.albums addObject:album];
-    }
+        });
+    };
+    
 }
-
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return self.albums.count;
+    return [self.sampleCollectionController albumsCount];
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    BHAlbum *album = self.albums[section];
     
-    return album.photos.count;
+    return [self.sampleCollectionController albumPhotosCountForSection:section];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    JeffCustomCollectionViewCell *jeffCell = [collectionView dequeueReusableCellWithReuseIdentifier:JeffDefaultCellReuseIdentifier forIndexPath:indexPath];
     
-    BHAlbum *album = self.albums[indexPath.section];
-    BHPhoto *photo = album.photos[indexPath.item];
+    return [self buildCellWithSamplePhotoForCollectionView:collectionView AndIndexPath:indexPath];
+}
+
+-(JeffCustomCollectionViewCell*)buildCellWithSamplePhotoForCollectionView:(UICollectionView*)collectionView AndIndexPath:(NSIndexPath*)indexPath{
+    JeffCustomCollectionViewCell *photoCell = [collectionView dequeueReusableCellWithReuseIdentifier:JeffDefaultCellReuseIdentifier forIndexPath:indexPath];
     
-    jeffCell.imageView.image = [photo image];
+    [self.sampleCollectionController loadImageForIndexPath:indexPath];
     
-    return jeffCell;
+    return photoCell;
 }
 
 #pragma mark - View Rotation (Doesn't seem scalable...)

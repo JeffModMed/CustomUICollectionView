@@ -20,6 +20,8 @@
 		7DE3A72C1CC9299E00A8E856 /* JeffCustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3A72A1CC9299E00A8E856 /* JeffCustomCollectionViewCell.xib */; };
 		7DE3A7391CC9493700A8E856 /* BHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3A7361CC9493700A8E856 /* BHAlbum.m */; };
 		7DE3A73A1CC9493700A8E856 /* BHPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3A7381CC9493700A8E856 /* BHPhoto.m */; };
+		7DE3A7461CCA709000A8E856 /* SamplePhotosCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3A7451CCA709000A8E856 /* SamplePhotosCollectionController.m */; };
+		7DE3A74B1CCA751E00A8E856 /* SamplePhotoCollectionAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3A74A1CCA751E00A8E856 /* SamplePhotoCollectionAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		7DE3A7361CC9493700A8E856 /* BHAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BHAlbum.m; path = "Models/Sample Photos Model/BHAlbum.m"; sourceTree = "<group>"; };
 		7DE3A7371CC9493700A8E856 /* BHPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BHPhoto.h; path = "Models/Sample Photos Model/BHPhoto.h"; sourceTree = "<group>"; };
 		7DE3A7381CC9493700A8E856 /* BHPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BHPhoto.m; path = "Models/Sample Photos Model/BHPhoto.m"; sourceTree = "<group>"; };
+		7DE3A7441CCA709000A8E856 /* SamplePhotosCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SamplePhotosCollectionController.h; path = "View Controllers/SamplePhotosCollectionController.h"; sourceTree = "<group>"; };
+		7DE3A7451CCA709000A8E856 /* SamplePhotosCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SamplePhotosCollectionController.m; path = "View Controllers/SamplePhotosCollectionController.m"; sourceTree = "<group>"; };
+		7DE3A7491CCA751E00A8E856 /* SamplePhotoCollectionAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SamplePhotoCollectionAPI.h; path = APIs/SamplePhotoCollectionAPI.h; sourceTree = "<group>"; };
+		7DE3A74A1CCA751E00A8E856 /* SamplePhotoCollectionAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SamplePhotoCollectionAPI.m; path = APIs/SamplePhotoCollectionAPI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,13 +123,14 @@
 			children = (
 				7DBC66451CC564A0004C6F9B /* AppDelegate.h */,
 				7DBC66461CC564A0004C6F9B /* AppDelegate.m */,
-				7DBC664E1CC564A0004C6F9B /* Assets.xcassets */,
-				7DBC66501CC564A0004C6F9B /* LaunchScreen.storyboard */,
-				7DBC66531CC564A0004C6F9B /* Info.plist */,
-				7DBC66421CC564A0004C6F9B /* Supporting Files */,
+				7DE3A7481CCA748800A8E856 /* APIs */,
 				7DE3A72D1CC948B400A8E856 /* Models */,
 				7DE3A7241CC9273F00A8E856 /* View */,
 				7DE3A7181CC91E3D00A8E856 /* View Controller */,
+				7DBC66421CC564A0004C6F9B /* Supporting Files */,
+				7DBC66501CC564A0004C6F9B /* LaunchScreen.storyboard */,
+				7DBC66531CC564A0004C6F9B /* Info.plist */,
+				7DBC664E1CC564A0004C6F9B /* Assets.xcassets */,
 			);
 			path = CustomUICollectionView;
 			sourceTree = "<group>";
@@ -160,6 +167,8 @@
 				7DE3A71C1CC91FCF00A8E856 /* JeffCustomCollectionViewController.h */,
 				7DE3A71D1CC91FCF00A8E856 /* JeffCustomCollectionViewController.m */,
 				7DE3A71E1CC91FCF00A8E856 /* JeffCustomCollectionViewController.xib */,
+				7DE3A7441CCA709000A8E856 /* SamplePhotosCollectionController.h */,
+				7DE3A7451CCA709000A8E856 /* SamplePhotosCollectionController.m */,
 				7DE3A7211CC9266D00A8E856 /* JeffCustomCollectionViewLayout.h */,
 				7DE3A7221CC9266D00A8E856 /* JeffCustomCollectionViewLayout.m */,
 			);
@@ -193,6 +202,15 @@
 				7DE3A7381CC9493700A8E856 /* BHPhoto.m */,
 			);
 			name = "Sample Photos Model";
+			sourceTree = "<group>";
+		};
+		7DE3A7481CCA748800A8E856 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				7DE3A7491CCA751E00A8E856 /* SamplePhotoCollectionAPI.h */,
+				7DE3A74A1CCA751E00A8E856 /* SamplePhotoCollectionAPI.m */,
+			);
+			name = APIs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,9 +345,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DE3A72B1CC9299E00A8E856 /* JeffCustomCollectionViewCell.m in Sources */,
+				7DE3A74B1CCA751E00A8E856 /* SamplePhotoCollectionAPI.m in Sources */,
 				7DE3A7231CC9266D00A8E856 /* JeffCustomCollectionViewLayout.m in Sources */,
 				7DBC66471CC564A0004C6F9B /* AppDelegate.m in Sources */,
 				7DE3A71F1CC91FCF00A8E856 /* JeffCustomCollectionViewController.m in Sources */,
+				7DE3A7461CCA709000A8E856 /* SamplePhotosCollectionController.m in Sources */,
 				7DE3A73A1CC9493700A8E856 /* BHPhoto.m in Sources */,
 				7DBC66441CC564A0004C6F9B /* main.m in Sources */,
 				7DE3A7391CC9493700A8E856 /* BHAlbum.m in Sources */,
