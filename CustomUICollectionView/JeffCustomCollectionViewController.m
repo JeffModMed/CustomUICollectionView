@@ -28,7 +28,6 @@ static NSString * const JeffDefaultCellReuseIdentifier = @"JeffCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.mainCollectionView.backgroundColor = [UIColor blueColor];
     
     self.albums = [NSMutableArray array];
     
@@ -66,18 +65,23 @@ static NSString * const JeffDefaultCellReuseIdentifier = @"JeffCell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 10;
+    return self.albums.count;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 5;
+    BHAlbum *album = self.albums[section];
+    
+    return album.photos.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *jeffCell = [collectionView dequeueReusableCellWithReuseIdentifier:JeffDefaultCellReuseIdentifier forIndexPath:indexPath];
+    JeffCustomCollectionViewCell *jeffCell = [collectionView dequeueReusableCellWithReuseIdentifier:JeffDefaultCellReuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
+    BHAlbum *album = self.albums[indexPath.section];
+    BHPhoto *photo = album.photos[indexPath.item];
+    
+    jeffCell.imageView.image = [photo image];
     
     return jeffCell;
 }
